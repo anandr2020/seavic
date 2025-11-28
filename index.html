@@ -1,45 +1,55 @@
 <!doctype html>
 <html lang="en">
+<head><!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEAVIC Consulting — IT & Management</title>
 
-  <!-- New modern fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Modern fonts -->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">-->
+<link href="https://fonts.cdnfonts.com/css/frutiger-lt-pro" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+<!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
 
-      <a href="#home" data-scroll class="brand">
-        <div class="logo">
-          <svg width="38" height="38" viewBox="0 0 48 48">
+      <a href="#home" data-scroll class="brand" aria-label="SEAVIC Consulting home">
+       <!--<div class="logo" aria-hidden="true">
+          <svg width="38" height="38" viewBox="0 0 48 48" focusable="false">
             <rect x="4" y="6" width="40" height="36" rx="8" fill="var(--primary)"/>
             <path d="M12 34 L22 12 L34 34 Z" fill="var(--bg)"/>
           </svg>
-        </div>
-        <span class="brand-text">SEAVIC<span class="dot">.</span>Consulting</span>
+        </div>-->
+        <div class="logo">
+  <img src="assets/img/logo.jpg" style="height:40px; width:auto;">
+</div>
+
+
+<span class="brand-text">SeaVic Consulting</span>
+
       </a>
 
-      <nav class="primary-nav">
-        <ul id="navList">
+      <nav class="primary-nav" aria-label="Primary">
+        <ul id="navList" data-open="false">
           <li><a href="#home" data-scroll class="nav-link">Home</a></li>
           <li><a href="#services" data-scroll class="nav-link">Services</a></li>
+          <li><a href="#ai" data-scroll class="nav-link">AI</a></li>
           <li><a href="#partners" data-scroll class="nav-link">Partnerships</a></li>
-          <li><a href="#work" data-scroll class="nav-link">How we work</a></li>
+          <li><a href="#how-we-work" data-scroll class="nav-link">How we work</a></li>
           <li><a href="#offices" data-scroll class="nav-link">Offices</a></li>
           <li><a href="#contact" data-scroll class="cta-btn nav-contact">Contact</a></li>
         </ul>
       </nav>
 
-      <button id="menuToggle" class="menu-toggle">☰</button>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">☰</button>
     </div>
-    <div class="header-anim"></div>
+    <div class="header-anim" aria-hidden="true"></div>
   </header>
 
   <!-- MAIN -->
@@ -60,52 +70,82 @@
         </div>
 
         <aside class="hero-right">
-          <div id="heroImg" class="hero-image"></div>
-          <div class="hero-tiles">
-            <img src="assets/img/tile1.jpg">
-            <img src="assets/img/tile2.jpg">
-            <img src="assets/img/tile3.jpg">
+          <div id="heroImg" class="hero-image" role="img" aria-label="Hero image"></div>
+          <div class="hero-tiles" aria-hidden="true">
+            <img src="assets/img/tile1.jpg" alt="">
+            <img src="assets/img/tile2.jpg" alt="">
+            <img src="assets/img/tile3.jpg" alt="">
           </div>
         </aside>
       </div>
     </section>
 
     <!-- SERVICES -->
-   <!-- SERVICES -->
-<section id="services" class="section">
+    <section id="services" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">Built for scale. Designed for reliability.</p>
+
+        <div class="cards" role="list">
+
+          <article class="card" role="listitem">
+            <img src="assets/img/service1.jpg" class="card-img-large" alt="Application Development">
+            <h3>Application Development</h3>
+            <p>Cloud-native systems, APIs, web/mobile apps built with modern engineering.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="assets/img/service2.jpg" class="card-img-large" alt="Application Maintenance">
+            <h3>Application Maintenance</h3>
+            <p>Performance tuning, SLAs, monitoring, incident response & lifecycle management.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <img src="assets/img/ai-services.jpg" class="card-img-large" alt="AI Consulting">
+            <h3>AI Consulting</h3>
+            <p>Data intelligence, automation pipelines, and enterprise AI enablement.</p>
+          </article>
+
+          <article class="card" role="listitem">
+  <img src="assets/img/cyber.jpg" class="card-img-large" alt="Cybersecurity">
+  <h3>Cybersecurity</h3>
+  <p>Risk assessments, threat monitoring, data protection, and enterprise-grade security frameworks.</p>
+</article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI SECTION -->
+<section id="ai" class="section">
   <div class="section-inner">
-    
-    <h2 class="section-title">Services</h2>
-    <p class="section-sub">Built for scale. Designed for reliability.</p>
+    <h2 class="section-title">AI Consulting </h2>
+    <p class="section-sub">Transforming businesses with intelligent automation and enterprise-grade AI.</p>
 
     <div class="cards">
 
-      <!-- Card 1 -->
       <article class="card">
-        <img src="assets/img/service1.jpg" class="card-img-large" alt="Application Development">
-        <h3>Application Development</h3>
-        <p>Cloud-native systems, APIs, web/mobile apps built with modern engineering.</p>
+        <img src="assets/img/ai1.jpg" class="card-img-large" alt="AI Strategy & Roadmap">
+        <h3>AI Strategy & Roadmap</h3>
+        <p>We help organizations define AI use-cases, create adoption strategies, and build scalable AI roadmaps.</p>
       </article>
 
-      <!-- Card 2 -->
       <article class="card">
-        <img src="assets/img/service2.jpg" class="card-img-large" alt="Application Maintenance">
-        <h3>Application Maintenance</h3>
-        <p>Performance tuning, SLAs, monitoring, incident response & lifecycle management.</p>
+        <img src="assets/img/ai2.webp" class="card-img-large" alt="Automation & Workflow AI">
+        <h3>Automation & Workflow AI</h3>
+        <p>Reduce operational overhead with automated workflows, document intelligence, and real-time data processing.</p>
       </article>
 
-      <!-- Card 3 -->
       <article class="card">
-        <img src="assets/img/ai-services.jpg" class="card-img-large" alt="AI Consulting">
-        <h3>AI Consulting</h3>
-        <p>Data intelligence, automation pipelines, and enterprise AI enablement.</p>
+        <img src="assets/img/ai3.webp" class="card-img-large" alt="Custom LLM Solutions">
+        <h3>Custom LLM Solutions</h3>
+        <p>Build secure, private LLM apps like chat agents, research copilots, and domain-specific AI assistants.</p>
       </article>
 
     </div>
-
   </div>
 </section>
-
 
     <!-- PARTNERSHIPS -->
     <section id="partners" class="section">
@@ -114,30 +154,49 @@
         <p class="section-sub">Collaborating with forward-thinking innovators.</p>
 
         <div class="partner-card">
-          <img src="./assets/img/file.AI-logo.jpg" class="partner-img">
+          <img src="./assets/img/file.AI-logo.jpg" class="partner-img" alt="File.AI logo">
           <h3>File.AI Partnership</h3>
           <p>
             File.AI turns unstructured data into automated, validated pipelines.
             Together, we deliver scalable enterprise automation workflows.
           </p>
-          <a href="https://file.ai" target="_blank" class="btn-ghost small">Visit File.AI →</a>
+          <a href="https://file.ai" target="_blank" rel="noopener noreferrer" class="btn-ghost small">Visit File.AI →</a>
         </div>
       </div>
     </section>
+    <!--how we work-->
+<section class="section" id="how-we-work">
+  <div class="section-inner">
 
-    <!-- HOW WE WORK -->
-    <section id="work" class="section">
-      <div class="section-inner">
-        <h2 class="section-title">How we work</h2>
-        <p class="section-sub">A simple, predictable, outcome-driven approach.</p>
+    <h2 class="section-title">How we work</h2>
+    <p class="section-sub">A simple, predictable, outcome–driven approach.</p>
 
-        <div class="timeline">
-          <div class="step"><div class="step-num">01</div><div><h4>Discover</h4><p class="muted">Define impact & clarity.</p></div></div>
-          <div class="step"><div class="step-num">02</div><div><h4>Design</h4><p class="muted">Prototyping aligned to goals.</p></div></div>
-          <div class="step"><div class="step-num">03</div><div><h4>Deliver</h4><p class="muted">Launch, measure, scale.</p></div></div>
-        </div>
+    <div class="work-cards">
+
+      <div class="work-card">
+        <img src="./assets/img/work1.jpg" alt="Discover">
+        <h3>Discover</h3>
+        <p>Define impact & clarity.</p>
       </div>
-    </section>
+
+      <div class="work-card">
+        <img src="./assets/img/work2.jpg" alt="Design">
+        <h3>Design</h3>
+        <p>Prototyping aligned to goals.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="./assets/img/work3.jpg" alt="Deliver">
+        <h3>Deliver</h3>
+        <p>Launch, measure, scale.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- OFFICES -->
     <section id="offices" class="section">
@@ -159,7 +218,7 @@
         <h2 class="section-title">Get in touch</h2>
         <p class="section-sub">Let’s build something meaningful together.</p>
 
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" class="contact-form" novalidate>
           <div class="form-grid">
             <label class="field"><span class="muted">Name</span><input type="text" name="name" required></label>
             <label class="field"><span class="muted">Email</span><input type="email" name="email" required></label>
@@ -170,7 +229,7 @@
             <button type="submit" class="cta-btn btn-spot">Send message</button>
           </div>
 
-          <p id="formStatus" class="muted"></p>
+          <p id="formStatus" class="muted" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -194,9 +253,64 @@
       </div>
     </div>
 
-    <div class="footer-wave"></div>
+    <div class="footer-wave" aria-hidden="true"></div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEAVIC Consulting — IT & Management</title>
+
+  <!-- New modern fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+...
+<script src="script.js" defer></script>
+
+<!-- FORM BUTTON (Formspree) -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  
+  /* customize formbutton below */     
+  formbutton("create", {
+    action: "https://formspree.io/f/mkglvlra",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
+</body>
+
+ 
